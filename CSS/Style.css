@@ -7,8 +7,15 @@ body{
 	color: #212121;
 	background-size: 100%; 
 }
+@media (max-width: 1000px){
+	body{
+background: #c3af93}
+}
 
-
+.contenedor{
+	max-width: 900px;
+	margin: auto;
+}
 
 #animacion{
 	display: flex;
@@ -33,6 +40,8 @@ h1{
 	width: 45%;
   	margin: 0 auto;
   	font-size: 40px;
+  	display: flex;
+  	justify-content: center;
 }
 
 
@@ -47,7 +56,19 @@ h2{
 
 nav	.navegador{
 	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-bottom: 60px;
+
 }
+
+@media (max-width: 700px){
+	nav .navegador{
+		flex-direction: column;
+		justify-content: center;
+	}
+}
+
 .link{	
 	text-decoration: none;
 	color: #5D4037;
@@ -66,6 +87,8 @@ nav	.navegador{
 .sublink li a {
 	text-decoration: none;
 	color: black;
+
+
 }
 
 .sublink li:hover{
@@ -76,15 +99,12 @@ nav	.navegador{
 .prelink:hover .sublink li{
 	display: block;
 	position: relative;
-}
 
 }
 
-section .discografia article{
-	background: red;}
 
 .parrafo{
-	color: red;
+	color: white;
 /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100;Neutral+Density */
 background: -moz-linear-gradient(left, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
 background: -webkit-linear-gradient(left, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
@@ -99,13 +119,34 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 td:first-child{
 	color: #212121;
 	font-family: 'Slabo 27px', serif;
-	font-weight: bold;}
+	font-weight: bold;
+}
+.discografia-mobile{
+	display: none;
+}
 
-
+@media (max-width: 700px){
+	.discografia{
+		display: none;
+		}
+} 
+@media (max-width: 700px){
+	.discografia-mobile{
+		display: block;
+		}
+} 
 .video{ 
+	display: flex;
 	width: 60%;
   	margin: 0 auto;
+  	justify-content: center;
   }
+ 
+ @media (max-width: 700px){
+ 	 .video{
+ 		display:none;
+ 	}
+ }
 
 .formulario{
 	font-weight: 300
@@ -135,13 +176,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1ffff', end
 color: white;
  }
 
-.miembros article{
-	display: inline-block;
-	width: 20%;
+.miembros .contenedor{
+	display: flex;
 	padding: 20px;
 }
 
+@media (max-width: 900px){
+.miembros .contenedor{
+flex-direction: column;	}
+}
 
+.miembros .contenedor article{
+	padding: 20px;
+}
+s
 .cuadradodos {
     height: 100px;
     width: 100px;
